@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainWindowController">
    <top>
       <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab text="File">
+          <Tab style="-fx-border-width:5px;" text="File">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
@@ -66,9 +69,22 @@
                </content>
             </Tab>
         </tabs>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
       </TabPane>
    </top>
    <center>
       <TextArea BorderPane.alignment="CENTER" />
    </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="WordCount">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></Label>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>
