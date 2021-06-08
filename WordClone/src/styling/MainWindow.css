@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+
+/* Set the tabbed pane background colour this is the colour that is in each pane*/
+
+.tab-pane{
+	-fx-background-color: #627D98;
+}
+
+
+/*Set the background colour and the text colour of the tabs them selves */
+.tab{
+	
+	-fx-background-color: #627D98;
+	-fx-text-fill: #08403E;
+}
+
+/*Sets the background colour of the tab when is has been selected*/
+.tab:selected {
+    -fx-font-weight: bold;
+    -fx-background-color: #B9EFA4;
+    
+}
+
+/*Sets the border colour of the tab when its clicked this needs to be set as it defaults to a different colour to the colour we set above when the tab is selected */
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+	-fx-border-color: #B9EFA4;
+}
+
+/*Set the background colour behind each tab */
+
+.tab-header-area .tab-header-background {
+    -fx-background-color: #627D98;
+}
