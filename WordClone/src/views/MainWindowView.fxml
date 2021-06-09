@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -14,9 +15,23 @@
       <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab style="-fx-border-width:5px;" text="File">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" />
-            </content>
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button id="Save" mnemonicParsing="false" onAction="#saveFile" text="Save">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="testButton" mnemonicParsing="false" onAction="#test_openFileLocation" text="testButton">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+               </content>
           </Tab>
           <Tab text="Home">
             <content>
@@ -75,7 +90,7 @@
       </TabPane>
    </top>
    <center>
-      <TextArea BorderPane.alignment="CENTER" />
+      <TextArea fx:id="content" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
       <HBox BorderPane.alignment="CENTER">
