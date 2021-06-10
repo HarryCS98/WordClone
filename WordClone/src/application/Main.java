@@ -1,5 +1,6 @@
 package application;
 	
+import controllers.MainWindowController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -24,6 +25,13 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("WordClone");
 			primaryStage.show();
+			
+//			Create object of the controller
+			MainWindowController mainwindowcontroller = new MainWindowController();
+//			Then pass in the primary stage so we can then pass that to the file chooser javafx element
+//			Can't be in a constructor as the then the FXML view will not be able to load the MainWIndowController 
+			mainwindowcontroller.load(primaryStage);
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
