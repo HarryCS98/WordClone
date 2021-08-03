@@ -18,17 +18,17 @@
                <content>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button id="Save" mnemonicParsing="false" onAction="#saveFile" text="Save As">
+                        <Button id="Save" mnemonicParsing="false" onAction="#saveAs" text="Save As">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="testButton" mnemonicParsing="false"  text="testButton">
+                        <Button fx:id="testButton" mnemonicParsing="false" onAction="#open" text="Open">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" onAction="#save" text="Save" />
                      </children>
                   </HBox>
                </content>
