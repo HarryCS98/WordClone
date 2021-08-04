@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import models.FileModel;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.web.HTMLEditor;
 import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
@@ -24,8 +25,6 @@ public class Main extends Application {
 			primaryStage.setTitle("WordClone");
 			primaryStage.show();
 
-			
-		
 			/*
 			 * MainWindowController mainwindowcontroller = new MainWindowController();
 			 * 

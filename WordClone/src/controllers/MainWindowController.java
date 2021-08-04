@@ -3,6 +3,7 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 import models.FileModel;
 
@@ -13,7 +14,7 @@ public class MainWindowController {
 	// text in the application
 
 	@FXML
-	TextArea content = new TextArea();
+	HTMLEditor content = new HTMLEditor();
 
 	@FXML
 	Button testButton = new Button();
@@ -21,7 +22,7 @@ public class MainWindowController {
 
 	public void open(){
 		  
-		 content.setText(filemodel.loadFile());
+		 content.setHtmlText(filemodel.loadFile());
 		 setTitle();
 		  
 	}
@@ -30,7 +31,7 @@ public class MainWindowController {
 	public void saveAs(){
 		
 		
-		filemodel.saveAs(content.getText());
+		filemodel.saveAs(content.getHtmlText());
 		 
 
 	}
@@ -41,7 +42,7 @@ public class MainWindowController {
 	public void save(){
 		
 		
-		filemodel.save(content.getText());
+		filemodel.save(content.getHtmlText());
 		
 		
 	}
@@ -50,7 +51,7 @@ public class MainWindowController {
 	 private void setTitle() {
 			
 			Stage primStage = (Stage) content.getScene().getWindow();
-			primStage.setTitle(primStage.getTitle() + " - " + filemodel.getfileName());
+			primStage.setTitle("WordClone" + " - " + filemodel.getfileName());
 
 			
 		}

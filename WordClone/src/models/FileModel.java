@@ -60,6 +60,8 @@ public class FileModel {
 //		  Open then save verion of the file Chooser
 		File selectedFile = fileChooser.showOpenDialog(stage);
 		
+		docPath = selectedFile.getAbsolutePath();
+		
 		fileName =  selectedFile.getName();
 
 //		  Stop a null point exception error that occures if the user presses the cancel button in the Save Dialog box
