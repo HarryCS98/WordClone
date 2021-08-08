@@ -134,4 +134,29 @@ public class FileModel {
 	}
 	
 	
+	
+	public File loadLocalIMG() {
+	
+		String userHomePath = System.getProperty("user.home");
+		File userHome = new File(userHomePath); // uses the corect path separator for the OS File videos
+//		  Create new file object that is user home then Documents
+		File mydocuments = new File(userHome, "Documents");
+//		  Open the file chooser in the my Documents directory
+		fileChooser.setInitialDirectory(mydocuments);
+
+		//Other image types could be added here
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Images", "*.jpg", "*.png"));
+
+//		  Open then save verion of the file Chooser
+		File selectedFile = fileChooser.showOpenDialog(stage);
+		
+		
+		
+		
+		
+		return selectedFile;		
+	}
+
+	
+	
 }

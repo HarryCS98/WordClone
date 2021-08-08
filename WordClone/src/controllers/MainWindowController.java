@@ -1,8 +1,8 @@
 package controllers;
 
+
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 import models.FileModel;
@@ -15,46 +15,57 @@ public class MainWindowController {
 
 	@FXML
 	HTMLEditor content = new HTMLEditor();
-
+	
 	@FXML
-	Button testButton = new Button();
-
-
-	public void open(){
-		  
-		 content.setHtmlText(filemodel.loadFile());
-		 setTitle();
-		  
-	}
+	TextField imgURL_TB = new TextField();
 	
 
-	public void saveAs(){
-		
-		
+	public void open() {
+
+		content.setHtmlText(filemodel.loadFile());
+		setTitle();
+
+	}
+
+	public void saveAs() {
+
 		filemodel.saveAs(content.getHtmlText());
-		 
 
 	}
-	
-	
-	
-	
-	public void save(){
-		
-		
+
+	public void save() {
+
 		filemodel.save(content.getHtmlText());
+
+	}
+
+	public void insert_Image_Local() {
+			
+		
+		content.setHtmlText( content.getHtmlText() +  "<img src=' " + filemodel.loadLocalIMG().toURI() +
+		 "'/>");
+		  
+	}
+	
+
+//	Need to add validation to check URL is correct so we dont try and load a image that doesnt exist
+	public void insert_Image_URL() {
+
+		
+		content.setHtmlText( content.getHtmlText() +  "<img src=' " + imgURL_TB.getText() +
+				 "'/>");
 		
 		
 	}
 	
 	
-	 private void setTitle() {
-			
-			Stage primStage = (Stage) content.getScene().getWindow();
-			primStage.setTitle("WordClone" + " - " + filemodel.getfileName());
+	
 
-			
-		}
-	
-	
+	private void setTitle() {
+
+		Stage primStage = (Stage) content.getScene().getWindow();
+		primStage.setTitle("WordClone" + " - " + filemodel.getfileName());
+
+	}
+
 }

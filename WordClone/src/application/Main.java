@@ -1,12 +1,10 @@
 package application;
 
-import controllers.MainWindowController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import models.FileModel;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.web.HTMLEditor;
 import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
