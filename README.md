@@ -21,6 +21,7 @@ This project was used to increase my understanding of the Java language and get 
  - [x] File Opening
  - [x] Inserting of local and images from the web
  - [x] Text Styling, Decoration and Formatting
+ - [x] GUI scaling
  - [ ] Inserting tables
  - [ ] Resizing and placing images
  - [ ] word Count
