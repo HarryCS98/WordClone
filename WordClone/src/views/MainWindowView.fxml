@@ -28,7 +28,11 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#save" text="Save" />
+                        <Button mnemonicParsing="false" onAction="#save" text="Save">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin></Button>
+                        
                      </children>
                   </HBox>
                </content>
