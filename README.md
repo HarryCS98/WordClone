@@ -12,7 +12,7 @@
 > Coming Soon
 
 ## Introduction to the project
-This project was used to increase my understanding of the Java language and get to grips with the JavaFX as my degree mainly focused on Swing, as well as to dust up on my file handling skill and Git version control skill. The program consists of a GUI made using JavaFX and uses the MVC (Model – View – Controller) software design pattern.
+This project was used to increase my understanding of the Java language and get to grips with the JavaFX as my degree mainly focused on Swing, as well as to dust up on my file handling skill and Git version control skills. The program consists of a GUI made using JavaFX and uses the MVC (Model – View – Controller) software design pattern.
 
 
 ## Current Features/Planned Features
